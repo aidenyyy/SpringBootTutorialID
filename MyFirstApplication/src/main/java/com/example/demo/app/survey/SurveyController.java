@@ -88,6 +88,7 @@ public class SurveyController {
 		}
 		
 		Survey survey = new Survey();
+		survey.setId(surveyForm.getId());
 		survey.setAge(surveyForm.getAge());
 		survey.setSatisfaction(surveyForm.getSatisfaction());
 		survey.setComment(surveyForm.getComment());

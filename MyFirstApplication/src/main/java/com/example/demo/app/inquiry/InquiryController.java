@@ -100,6 +100,7 @@ public class InquiryController {
 		
 		//save to db
 		Inquiry inquiry = new Inquiry();
+		inquiry.setId(inquiryForm.getId());
 		inquiry.setName(inquiryForm.getName());
 		inquiry.setEmail(inquiryForm.getEmail());
 		inquiry.setContents(inquiryForm.getContents());

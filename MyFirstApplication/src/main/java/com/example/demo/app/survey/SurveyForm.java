@@ -1,11 +1,21 @@
 package com.example.demo.app.survey;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+@Entity
+@Table(name = "survey")
 public class SurveyForm {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
 	
 	@Min(0)
 	@Max(150)
@@ -51,6 +61,14 @@ public class SurveyForm {
 
 	public void setComment(String comment) {
 		this.comment = comment;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 	
